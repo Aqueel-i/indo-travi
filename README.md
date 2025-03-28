@@ -1,12 +1,21 @@
-# React + Vite
+# IndoTravi - Responsive Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌍 Overview  
+IndoTravi is a fully responsive travel landing page built with **React, HTML, CSS, and JavaScript**. The design is recreated to ensure smooth responsiveness across **mobile, tablet, and desktop** devices, along with interactive UI elements.
 
-Currently, two official plugins are available:
+## ✨ Features  
+✅ Fully responsive design for all screen sizes  
+✅ Smooth hover effects and basic transitions  
+✅ Styled using **TailwindCSS / MUI**  
+✅ Mock functionality for **date, budget, and guest search form**  
+✅ Optimized for performance and accessibility  
+✅ Uses high-quality placeholder images from **Pexels/Unsplash**  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo  
+🔗 [View the deployed site](#) *(https://indo-travi.vercel.app/)*  
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack  
+- **Frontend**: React, HTML, CSS, JavaScript  
+- **Styling**: TailwindCSS / MUI  
+- **Deployment**: Netlify / Vercel  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
