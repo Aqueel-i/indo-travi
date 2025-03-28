@@ -29,60 +29,43 @@ const IndoTravi = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Tight header section */}
-      <div className="mb-4 px-4 sm:px-6 lg:px-0 ml-50 mb-5"> {/* Added matching horizontal padding */}
-        <h2 className="text-xs font-bold text-gray-400 mb-0.5">Best Location</h2>
-        <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-0 md:gap-2">
-          <h3 className="text-2xl md:text-3xl text-gray-800">Indonesian tourism</h3>
-          <p className="text-gray-600 max-w-md text-xs md:text-sm mb-5 md:mt-0 mr-40">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Header section with responsive spacing */}
+      <div className="mb-8 lg:mb-12">
+        <h2 className="text-xs font-bold text-gray-400 mb-2">Best Location</h2>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">
+            Indonesian tourism
+          </h3>
+          <p className="text-gray-600 text-sm md:text-base max-w-md">
             Extraordinary natural beauty, enjoy the rich culture, and experience the friendliness of the local people.
           </p>
         </div>
       </div>
 
-      {/* Card rows remain unchanged */}
-      <div className="flex flex-col items-center">
-        <div className="flex flex-wrap justify-center gap-6 mb-6 w-full">
-          {destinations.slice(0, 2).map((destination, index) => (
-            <div
-              key={index}
-              className={`relative bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group ${destination.fullWidth ? 'w-full md:w-[calc(50%-12px)]' : 'w-full md:w-[calc(25%-18px)]'}`}
-            >
-              <div className="h-64 w-full overflow-hidden">
-                <img
-                  src={destination.image}
-                  alt={destination.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                <h3 className="text-lg font-semibold text-white mb-1">{destination.name}</h3>
-                <p className="text-white font-medium text-sm">{destination.tour}</p>
-              </div>
+      {/* Responsive card grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {destinations.map((destination, index) => (
+          <div
+            key={index}
+            className={`relative rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg ${
+              destination.fullWidth ? 'md:col-span-2' : ''
+            }`}
+          >
+            <div className="aspect-w-16 aspect-h-9">
+              <img
+                src={destination.image}
+                alt={destination.name}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
-          ))}
-        </div>
-        <div className="flex flex-wrap justify-center gap-6 w-full">
-          {destinations.slice(2, 4).map((destination, index) => (
-            <div
-              key={index + 2}
-              className={`relative bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group ${destination.fullWidth ? 'w-full md:w-[calc(50%-12px)]' : 'w-full md:w-[calc(25%-18px)]'}`}
-            >
-              <div className="h-64 w-full overflow-hidden">
-                <img
-                  src={destination.image}
-                  alt={destination.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                <h3 className="text-lg font-semibold text-white mb-1">{destination.name}</h3>
-                <p className="text-white font-medium text-sm">{destination.tour}</p>
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex flex-col justify-end p-6">
+              <h3 className="text-xl font-semibold text-white mb-1">{destination.name}</h3>
+              <p className="text-white/90 font-medium">{destination.tour}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
