@@ -13,12 +13,36 @@ const Footer = () => {
             <div className="min-w-[150px]">
               <h3 className="font-bold text-lg mb-3">About</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">About Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Careers</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Jobs</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">In Press</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Gallery</a></li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Jobs
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    In Press
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Gallery
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -26,12 +50,36 @@ const Footer = () => {
             <div className="min-w-[150px]">
               <h3 className="font-bold text-lg mb-3">Support</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Contact us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Online Chat</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Whatsapp</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Telegram</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Ticketing</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Call Center</a></li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Online Chat
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Whatsapp
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Telegram
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Ticketing
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Call Center
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -39,12 +87,36 @@ const Footer = () => {
             <div className="min-w-[150px]">
               <h3 className="font-bold text-lg mb-3">FAQ</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Account</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Booking</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Payments</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Returns</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-600">Terms & Conditions</a></li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Account
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Booking
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Payments
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Returns
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-blue-600">
+                    Terms & Conditions
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -55,32 +127,56 @@ const Footer = () => {
           {/* Newsletter Column */}
           <div className="md:w-[200%] md:max-w-[400px] mt-4 md:mt-0">
             <h3 className="font-bold text-lg mb-3">Newsletter</h3>
-            <p className="mb-4 text-sm">Don't miss out on the exciting world of travel – subscribe now and embark on a journey of discovery with us.</p>
+            <p className="mb-4 text-sm">
+              Don't miss out on the exciting world of travel – subscribe now
+              and embark on a journey of discovery with us.
+            </p>
 
-            {/* Search Bar with Email Icon */}
-            <div className="relative mb-4">
+            {/* Form for semantic correctness */}
+            <form className="relative mb-4" onSubmit={(e) => e.preventDefault()}>
+              <label htmlFor="email" className="sr-only">
+                Email Address
+              </label>
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
                 <FiMail size={18} />
               </div>
               <input
+                id="email"
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-blue-500 pr-24"
+                className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-blue-500 pr-24 text-black"
+                aria-label="Email Address"
+                required
               />
-              <button className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-4 py-1 rounded-full hover:bg-blue-700 transition-colors text-sm">
+              <button
+                type="submit"
+                className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-4 py-1 rounded-full hover:bg-blue-700 transition-colors text-sm"
+              >
                 Submit
               </button>
-            </div>
+            </form>
 
             {/* Social Media Icons */}
             <div className="flex justify-end gap-4">
-              <a href="#" className="text-gray-700 hover:text-black transition-colors">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="text-gray-700 hover:text-black transition-colors">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="text-gray-700 hover:text-black transition-colors">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors"
+                aria-label="YouTube"
+              >
                 <FaYoutube size={20} />
               </a>
             </div>
@@ -88,7 +184,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-sm mt-15">
+        <div className="text-center text-sm mt-16">
           ©2023 Indottavi, All Rights Reserved
         </div>
       </div>
